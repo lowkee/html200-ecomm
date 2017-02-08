@@ -1,5 +1,5 @@
 var products = [
-  {
+  /*{
     "name": "Reversible Plaid",
     "price": 26.99,
     "description": "Two classic patterns in one great look: This supersoft and cozy reversible scarf instantly doubles your street-style cred. 100% acrylic.",
@@ -10,14 +10,20 @@ var products = [
     "price": 49.99,
     "description": "Warm yourself with this women's natural cable knit scarf, crafted from 100% Merino wool. Imported.",
     "imageTitle": "wool-cable.jpeg"
-  },
-  {
+  },*/
+    products[0] = {
     "name": "Northern Lights",
     "price": 29.99,
     "description": "Handmade by women in Agra, sales provide medical and educational support in this remote area of India. Crinkly 100% cotton.",
     "imageTitle": "northern-lights.jpg"
-  },
-  {
+  };
+    var i, item;
+    for(i = 0; i < products.length; i++) {
+        for(item in products[i]) {
+    console.log(item + ":" +products[i].item);
+  }
+}
+  /*{
     "name": "Ombre Infinity",
     "price": 11.99,
     "description": "A dip-dye effect adds color and dimension to a cozy infinity scarf featuring a soft, chunky knit. 100% acrylic.",
@@ -46,5 +52,5 @@ var products = [
     "price": 70.99,
     "description": "Faribault brings you the Ashby Twill Scarf in Natural. Woven with a 'broken' twill technique, the Ashby Twill Scarf has a slight zigzag texture. Made in USA, this timeless scarf is crafted with luxurious merino wool and finished with heather gray fringe. 100% Merino wool",
     "imageTitle": "twill.jpg"
-  }
+  }*/
 ]
