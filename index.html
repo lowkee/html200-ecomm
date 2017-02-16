@@ -32,7 +32,9 @@
 
   <aside>
     <form name="filterBoss" onsubmit="handleForm();">
-      <label for=filter>Filter By:
+      <input type="text" name="name">
+      <input type="submit" value="Sort">
+       <label for=filter>Filter By:
         <select name="filter" id="filter">
           <option value="">Choose One</option>
           <option value="price">Price</option>
@@ -40,7 +42,6 @@
           <option value="img">description</option>
         </select>
       </label>
-      <input type="submit" value="Sort">
     </form>
   </aside>
 
