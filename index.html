@@ -4,12 +4,12 @@
   <title>Winter Scarves</title>
 
   <meta charset="utf-8">
-
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" href="styles/reset.css">
   <link rel="stylesheet" href="styles/main.css">
-
-  <!-- replace with your personal Font Awesome CDN link -->
-  <script src="https://use.fontawesome.com/???.js"></script>
+  
+  <!-- replaced with my personal Font Awesome CDN link--> 
+  <script src="https://use.fontawesome.com/e4163c2b14.js"></script>
 </head>
 
 <body>
@@ -24,21 +24,22 @@
         </li>
       </ul>
     </nav>
-
+    <div class="logoSlogan">
+  <img src="images/logo-scarfcat.png" alt="drawing of a white cat wearing a scarf">
     <h1>Winter Wear Warehouse</h1>
+    </div>
   </header>
 
   <aside>
-    <form>
-      <label>Filter By:
-        <select name="filter">
+    <form name="filterBoss" onsubmit="handleForm();">
+      <label for=filter>Filter By:
+        <select name="filter" id="filter">
           <option value="">Choose One</option>
           <option value="price">Price</option>
           <option value="name">Name</option>
           <option value="img">description</option>
         </select>
       </label>
-
       <input type="submit" value="Sort">
     </form>
   </aside>
@@ -49,9 +50,18 @@
     <div class="item-container">
       <div class="item">
         <!-- code template for a single item will go here -->
-        <p>Handmade by women in Agra, sales provide medical and educational support in this remote area of India. Crinkly 100% cotton.</p>
         <img src="images/northern-lights.jpg" alt="northern lights scarf">
-        </div>
+        <p>Handmade by women in Agra, sales provide medical and educational support in this remote area of India. Crinkly 100% cotton.</p>
+        <!--Shouldn't have to put images here need to pull them from the scrip.js somehow.
+        <img src="images/fringed-plaid.jpeg" alt="fringed plaid scarf">
+        <img src="images/wool-cable.jpeg" alt="wool cable scarf">
+        <img src="images/multi-color.jpeg" alt="multi color scarf">
+        <img src="images/ombre-infinity.jpg" alt=" ombre infinity scarf">
+        <img src="images/ombre-infinity.jpg" alt=" ombre infinity scarf">
+        <img src="images/reversible-plaid.jpg" alt="reversible scarf">
+        <img src="images/twill.jpg" alt="twill scarf">-->
+      </div>
+
     </div>
   </section>
 
