@@ -1,3 +1,19 @@
+.brand {
+  margin: 1rem;
+}
+
+.brand img {
+  width: 8%;
+}
+
+.brand h1 {
+  color: rgb(61, 140, 215);
+  display: inline-block;
+  font-size: 4rem;
+  width: 30%;
+  font-weight: bold;
+}
+
 .item-container {
     display: flex;
     width: 400px;
@@ -35,7 +51,7 @@ nav ul li a {
   width: 30%;
   font-weight: bold;
 }
-
+/*tried to do my own flexible grid without any success going to link to bootstrap instead
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
 .col-3 {width: 25%;}
@@ -54,12 +70,11 @@ nav ul li a {
     padding: 15px;
 }
 
-
 .row::after {
     content: "";
     clear: both;
     display: table;
-}
+}*/
 
 .item img{
   width: 100%;

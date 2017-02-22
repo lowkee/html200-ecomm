@@ -50,9 +50,30 @@ var products = [
   ];
 var container = document.getElementById("item-container");
 for (i = 0; i < products.length; i++) {
+var item = document.createElement("div");
+  item.className = "item";
+  item.innerHTML = "<h4>" + products[i].name + "</h4>";
+  item.innerHTML += "<img srcset='" + products[i].imageSrcSet + "' " + "sizes='" + products[i].imagesSizes + "' " + "src'" + products[i].imageTitle + "'alt='" + products[i].name + " image'>";
+  item.innerHTML += "<p>" + products[i].description + "<p>";
+  container.appendChild(item);
 }
       
   function handleForm() {
   console.log(document.filterBoss.name.value);
     event.preventDefault();
+}
+
+//ToDo: Trigger on change of cart contents
+function sumPrices(cartArray){
+  //for loop through array, sum value of price attribute for each object
+  var total = 0;
+  
+  for (var i=0; i<cartArray.length; i++){
+    
+    //console.log(cartArray[i].price);
+   if(cartArray[i].price){
+    total = total +cartArray[i].price;
+  }
+    //todo: print total as html to page, next to cart icon
+  console.log(total);
 }
