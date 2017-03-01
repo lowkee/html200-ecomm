@@ -39,7 +39,7 @@ var products = [
     "name": "Etro Paisley-Print Silk",
     "price": 249.99,
     "description": "Luxurious silk scarf with subtle paisley pattern. 100% silk",
-    "imageTitle": "etro.jpg"
+    "imageTitle": "etro.png"
   },
   {
     "name": "Ashby Twill",
@@ -49,19 +49,35 @@ var products = [
   }
   ];
 var container = document.getElementById("item-container");
-for (i = 0; i < products.length; i++) {
-var item = document.createElement("div");
-  item.className = "item";
+for (var i = 0; i < products.length; i++) {
+var image = document.createElement("img");
+ image.setAttribute('src', "./images/" + products[i].imageTitle);
+  image.classList.add("product-image")  
+  
+  /*name.innerText = products[i].name;*/
+  var para = document.createElement("p");
+  var node = document.createTextNode(products[i].name);
+  para.appendChild(node);
+
+  para.classList.add("product-name")
+  container.appendChild(para);
+  
+  
+  console.log(name, image);
+  console.log(products.length);
+  
+  /* item.className = "item";
   item.innerHTML = "<h4>" + products[i].name + "</h4>";
   item.innerHTML += "<img srcset='" + products[i].imageSrcSet + "' " + "sizes='" + products[i].imagesSizes + "' " + "src'" + products[i].imageTitle + "'alt='" + products[i].name + " image'>";
-  item.innerHTML += "<p>" + products[i].description + "<p>";
-  container.appendChild(item);
-}
+  item.innerHTML += "<p>" + products[i].description + "<p>";*/
+  container.appendChild(image);
+  
+  }
       
   function handleForm() {
   console.log(document.filterBoss.name.value);
     event.preventDefault();
-}
+  }
 
 //ToDo: Trigger on change of cart contents
 function sumPrices(cartArray){
@@ -72,8 +88,9 @@ function sumPrices(cartArray){
     
     //console.log(cartArray[i].price);
    if(cartArray[i].price){
-    total = total +cartArray[i].price;
-  }
+    total = total + cartArray[i].price;
+   }
     //todo: print total as html to page, next to cart icon
   console.log(total);
+  }
 }
