@@ -52,7 +52,7 @@ var container = document.getElementById("item-container");
 for (var i = 0; i < products.length; i++) {
 var image = document.createElement("img");
  image.setAttribute('src', "./images/" + products[i].imageTitle);
-  image.classList.add("product-image")  
+  image.classList.add("product-image");  
   
   /*name.innerText = products[i].name;*/
   var para = document.createElement("p");
@@ -61,8 +61,7 @@ var image = document.createElement("img");
 
   para.classList.add("product-name")
   container.appendChild(para);
-  
-  
+    
   console.log(name, image);
   console.log(products.length);
   
@@ -71,7 +70,6 @@ var image = document.createElement("img");
   item.innerHTML += "<img srcset='" + products[i].imageSrcSet + "' " + "sizes='" + products[i].imagesSizes + "' " + "src'" + products[i].imageTitle + "'alt='" + products[i].name + " image'>";
   item.innerHTML += "<p>" + products[i].description + "<p>";*/
   container.appendChild(image);
-  
   }
       
   function handleForm() {
