@@ -65,24 +65,42 @@ var image = document.createElement("img");
   console.log(name, image);
   console.log(products.length);
   
+  container.appendChild(image);
+  }
   /* item.className = "item";
   item.innerHTML = "<h4>" + products[i].name + "</h4>";
   item.innerHTML += "<img srcset='" + products[i].imageSrcSet + "' " + "sizes='" + products[i].imagesSizes + "' " + "src'" + products[i].imageTitle + "'alt='" + products[i].name + " image'>";
   item.innerHTML += "<p>" + products[i].description + "<p>";*/
-  container.appendChild(image);
-  }
+  
       
   function handleForm() {
   console.log(document.filterBoss.name.value);
     event.preventDefault();
   }
 
+function addItem(name,price){
+  var item = {}
+    item.name = name;
+    item.price = price;
+    products.push(item);
+    // console.log(item, item.name, item.price);
+  
+}
+
+function removeItem(name){
+    for(var i = 0; i < products.length; i++)
+      if(name == products[i].name){
+        products.splice(i, 1);
+        break;
+  }
+}
+
 //ToDo: Trigger on change of cart contents
-function sumPrices(cartArray){
+function checkout(cartArray){
   //for loop through array, sum value of price attribute for each object
   var total = 0;
   
-  for (var i=0; i<cartArray.length; i++){
+  for (var i=0; i < cartArray.length; i++){
     
     //console.log(cartArray[i].price);
    if(cartArray[i].price){
