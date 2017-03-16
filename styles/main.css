@@ -24,16 +24,50 @@ body {
   font-weight: bold;
 }
 
-p{
+#cart {
+  position: absolute;
+  visibility: hidden;
+  right: 5%;
+  background-color: white;
+  border: 1px solid black;
+  min-width: 25%;
+  padding: 3px;
+}
+
+#cart h2 {
+  text-align: center;
+}
+
+#cartItems {
+  padding: 3px;
+}
+
+#cartItems table {
+  width: 100%;
+}
+
+#cartItems td {
+  padding: 5px;
+}
+
+#cartItems td.currencyAmount {
+  text-align: right;
+}
+
+#cartItems tfoot {
+  border-top: 1px solid black;
+}
+
+p {
   font-size: 1rem;
  }
 
-.product-image{
+.product-image {
   height: 100px;
   width: 100px;
 }
 
-.product-name{
+.product-name {
   font-size: 2rem;
 }
 
@@ -135,7 +169,7 @@ nav ul li a {
 }
 */
 
-.item img{
+.item img {
   width: 100%;
 }
 

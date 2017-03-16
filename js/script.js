@@ -95,6 +95,11 @@ function removeItem(name){
   }
 }
 
+function myFunction() {
+    products.sort();
+    document.getElementById("cart").innerHTML = products;
+}
+
 //ToDo: Trigger on change of cart contents
 function checkout(cartArray){
   //for loop through array, sum value of price attribute for each object
